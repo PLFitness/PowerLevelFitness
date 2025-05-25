@@ -44,6 +44,41 @@ figure, header, nav, section, article, aside, footer, figcaption {
   outline: 0;
 }
 
+html { 
+  scroll-behavior: smooth;
+}
+
+.review-card {
+  max-width: 400px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.reviewer-name {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.stars {
+  color: #ffc107;
+}
+
+.review-body {
+  font-size: 0.95em;
+  color: #333;
+  margin-top: 10px;
+}
+
 .clearfix:after {
   content: ".";
   display: block;
@@ -275,7 +310,7 @@ header
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  margin-bottom: -50px;
+  margin-bottom: -200px;
   margin-top: -65px;
 }
 
@@ -859,6 +894,15 @@ schedule
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  font-weight: 600;
+}
+
+.contact-us-title {
+  color: #fff;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: 0.25px;
 }
 
 #schedule table {
@@ -1023,12 +1067,30 @@ contact
   padding: 0px;
 }
 
+#reviews .container {
+  max-width: 100%;
+}
+
+#reviews .review-rows {
+  max-width: 1800px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  @media screen and (max-width: 1280px){
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 800px;
+  }
+}
+
 #contact-us .contact-form {
-  padding: 80px;
+  padding: 40px;
   background-image: url(../images/contact-bg.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 99%;
 }
 
 #contact-us .contact-form #contact {
@@ -1241,6 +1303,10 @@ responsive
   #our-classes .tabs-content {
     margin-left: 0px;
     margin-top: 30px;
+  }
+  .tabs-content img {
+    height: 350px;
+    width: 350px;
   }
   .trainer-item {
     margin-bottom: 30px;
